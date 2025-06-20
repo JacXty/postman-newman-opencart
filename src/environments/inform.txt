@@ -1,0 +1,24 @@
+INFORME DE PRUEBAS - OPEN CART
+Fecha de ejecución: 20/06/2025
+
+CASOS DE PRUEBA:
+
+| Test ID | Descripción                                | Resultado |
+|---------|--------------------------------------------|-----------|
+| TC01    | Registro exitoso                           | ✅        |
+| TC02    | Registro con email duplicado               | ✅        |
+| TC03    | Login exitoso                              | ✅        |
+| TC04    | Login fallido con credenciales inválidas   | ✅        |
+| TC05    | Logout exitoso                             | ✅        |
+
+HALLAZGOS:
+- El sistema valida correctamente el registro evitando duplicidad de correos.
+- Login exitoso redirige al dashboard de usuario con el título “My Account”.
+- Login fallido muestra el mensaje de advertencia y sugiere recuperación de contraseña.
+- Logout muestra correctamente el mensaje “Account Logout”.
+- Se necesita mantener las cookies activas para realizar operaciones de sesión.
+
+RECOMENDACIONES:
+- Implementar mensajes de error más descriptivos para login fallido.
+- Mejorar validación de formato de email y longitud de contraseña en el registro.
+- Considerar respuestas en formato JSON para facilitar pruebas automatizadas con herramientas como Postman o Newman.
